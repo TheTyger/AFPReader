@@ -14,7 +14,7 @@ namespace AFP_Reader.Structured_Field_Definitions
             "medium map is a print control resource object that contains a complete set of " +
             "controls for presenting pages on physical media such as sheets and for generating " +
             "multiple copies of sheets with selectable modifications.These controls may be " +
-            "grouped into two categories: Medium level controls, Page level controls /r/n" +
+            "grouped into two categories: Medium level controls, Page level controls \r\n" +
             "Medium level controls are controls that affect the medium, such as the specification " +
         "of medium overlays, medium size, medium orientation, medium copies, simplex or " +
         "duplex, medium finishing, media type, and media source and destination selection. " +

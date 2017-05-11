@@ -45,6 +45,9 @@ namespace AFP_Reader
         private void lstLines_SelectedIndexChanged(object sender, EventArgs e)
         {
             AFPDataLine dl = (AFPDataLine)lstLines.SelectedItem;
+            updateFields(dl);
+        }
+        private void updateFields(AFPDataLine dl) {
             lblAFPFlag.Text = dl.flags;
             lblAFPLen1.Text = dl.length.ToString();
             lblAFPSFI1.Text = dl.SFIdentifier[0];
@@ -56,6 +59,12 @@ namespace AFP_Reader
             lblReadSFI.Text = dl.SFIString;
             lblReference.Text = dl.SFIReference;
             txtSFDesc.Text = dl.SFIDesc;
+        }
+        
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            AFPDataLine dl = (AFPDataLine)treeView1.SelectedNode.Tag;
+            updateFields(dl);
         }
     }
 }

@@ -100,6 +100,7 @@ namespace AFP_Reader
         {
             foreach (AFPNode Node in Nodes) {
                 TreeNode tn = view.Nodes.Add(Node.Name);
+                tn.Tag = Node.Data;
                 foreach (AFPNode child in Node.Children) {
                     tn = AddChildNodes(tn, child);
                 }
@@ -108,6 +109,7 @@ namespace AFP_Reader
         }
         private TreeNode AddChildNodes(TreeNode tn, AFPNode child) {
             TreeNode tnx= tn.Nodes.Add(child.Name);
+            tnx.Tag = child.Data;
             if (child.Children != null) {
                 foreach (AFPNode ch in child.Children)
                 {
