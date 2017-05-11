@@ -50,13 +50,15 @@
             this.tabAFPLineList = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.treeView1 = new System.Windows.Forms.TreeView();
             this.tabAFPLineList.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnloadafp
             // 
-            this.btnloadafp.Location = new System.Drawing.Point(12, 33);
+            this.btnloadafp.Location = new System.Drawing.Point(12, 4);
             this.btnloadafp.Name = "btnloadafp";
             this.btnloadafp.Size = new System.Drawing.Size(102, 23);
             this.btnloadafp.TabIndex = 0;
@@ -67,7 +69,7 @@
             // lblFileName
             // 
             this.lblFileName.AutoSize = true;
-            this.lblFileName.Location = new System.Drawing.Point(10, 9);
+            this.lblFileName.Location = new System.Drawing.Point(128, 9);
             this.lblFileName.Name = "lblFileName";
             this.lblFileName.Size = new System.Drawing.Size(79, 13);
             this.lblFileName.TabIndex = 1;
@@ -75,10 +77,11 @@
             // 
             // lstLines
             // 
+            this.lstLines.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lstLines.FormattingEnabled = true;
-            this.lstLines.Location = new System.Drawing.Point(6, 3);
+            this.lstLines.Location = new System.Drawing.Point(3, 3);
             this.lstLines.Name = "lstLines";
-            this.lstLines.Size = new System.Drawing.Size(235, 368);
+            this.lstLines.Size = new System.Drawing.Size(539, 391);
             this.lstLines.TabIndex = 2;
             this.lstLines.SelectedIndexChanged += new System.EventHandler(this.lstLines_SelectedIndexChanged);
             // 
@@ -258,10 +261,10 @@
             // 
             this.tabAFPLineList.Controls.Add(this.tabPage3);
             this.tabAFPLineList.Controls.Add(this.tabPage4);
-            this.tabAFPLineList.Location = new System.Drawing.Point(120, 33);
+            this.tabAFPLineList.Location = new System.Drawing.Point(12, 33);
             this.tabAFPLineList.Name = "tabAFPLineList";
             this.tabAFPLineList.SelectedIndex = 0;
-            this.tabAFPLineList.Size = new System.Drawing.Size(255, 423);
+            this.tabAFPLineList.Size = new System.Drawing.Size(553, 423);
             this.tabAFPLineList.TabIndex = 33;
             // 
             // tabPage3
@@ -270,20 +273,29 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(247, 397);
+            this.tabPage3.Size = new System.Drawing.Size(545, 397);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "Raw View";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.treeView1);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(247, 397);
+            this.tabPage4.Size = new System.Drawing.Size(355, 397);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Tree View";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // treeView1
+            // 
+            this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeView1.Location = new System.Drawing.Point(3, 3);
+            this.treeView1.Name = "treeView1";
+            this.treeView1.Size = new System.Drawing.Size(349, 391);
+            this.treeView1.TabIndex = 0;
             // 
             // Form1
             // 
@@ -314,6 +326,7 @@
             this.Text = "AFP Translator";
             this.tabAFPLineList.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -343,6 +356,7 @@
         private System.Windows.Forms.TabControl tabAFPLineList;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TreeView treeView1;
     }
 }
 

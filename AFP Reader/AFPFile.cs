@@ -13,7 +13,9 @@ namespace AFP_Reader
             {"BDT","EDT" },
             {"BPG", "EPG" },
             {"BPT","EPT" },
-            {"BAG", "EAG" }
+            {"BAG", "EAG" },
+            {"BII","EII" },
+            {"BNG","ENG"}
         };
 
     }

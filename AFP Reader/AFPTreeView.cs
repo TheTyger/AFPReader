@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace AFP_Reader
 {
@@ -95,6 +96,27 @@ namespace AFP_Reader
             
         }
 
+        public void populateTreeView(TreeView view)
+        {
+            foreach (AFPNode Node in Nodes) {
+                TreeNode tn = view.Nodes.Add(Node.Name);
+                foreach (AFPNode child in Node.Children) {
+                    tn = AddChildNodes(tn, child);
+                }
+            }
+
+        }
+        private TreeNode AddChildNodes(TreeNode tn, AFPNode child) {
+            TreeNode tnx= tn.Nodes.Add(child.Name);
+            if (child.Children != null) {
+                foreach (AFPNode ch in child.Children)
+                {
+                    tnx = AddChildNodes(tnx, ch);
+                }
+            }
+            
+            return tn;
+        }
     }
 
 

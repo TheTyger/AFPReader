@@ -36,7 +36,7 @@ namespace AFP_Reader
                 // build AFP Data field
                 // Build readable data field
                 AFPTreeView tv = new AFPTreeView(parsedData);
-                
+                tv.populateTreeView(treeView1);
                 string x = "0";
             }
             
