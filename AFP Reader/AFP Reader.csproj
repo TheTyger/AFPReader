@@ -166,6 +166,8 @@
     <Compile Include="Structured Field Definitions\RecordDescriptor.cs" />
     <Compile Include="Structured Field Definitions\TagLogicalElement.cs" />
     <Compile Include="Structured Field Definitions\XMLDescriptor.cs" />
+    <Compile Include="Triplet Definitions\Base.cs" />
+    <Compile Include="Triplet Definitions\x02.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -190,6 +192,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AFPParser\AFPParser.csproj">
+      <Project>{fb0754f3-2d81-4e70-9643-cf22ac0c8f7d}</Project>
+      <Name>AFPParser</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

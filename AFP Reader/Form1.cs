@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AFPParser;
 
 namespace AFP_Reader
 {
@@ -28,10 +29,11 @@ namespace AFP_Reader
 
                 // parse for line data
                 byte[] afpdata = File.ReadAllBytes(dlg.FileName);
+                AFPDocument Doc = new AFPDocument(afpdata);
                 List<AFPDataLine> parsedData = AFPFormatHelper.Lines(afpdata);
                 
-                lstLines.DataSource = parsedData;
-                lstLines.DisplayMember = "SFICode";
+                lstLines.DataSource = Doc.Nodes;
+                lstLines.DisplayMember = "Name";
 
                 // build AFP Data field
                 // Build readable data field
@@ -59,8 +61,17 @@ namespace AFP_Reader
             lblReadSFI.Text = dl.SFIString;
             lblReference.Text = dl.SFIReference;
             txtSFDesc.Text = dl.SFIDesc;
+            txtData.Text = ConvertDataArraytoString(dl.data);
         }
-        
+
+        private string ConvertDataArraytoString(List<byte> l) {
+            StringBuilder pacMan = new StringBuilder();
+            foreach (byte nom in l) {
+                pacMan.Append(nom.ToString("X2"));
+            }
+            return pacMan.ToString();
+        }
+
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
             AFPDataLine dl = (AFPDataLine)treeView1.SelectedNode.Tag;
