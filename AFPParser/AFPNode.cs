@@ -12,6 +12,10 @@ namespace AFPParser
         public List<AFPNode> Nodes { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
+        public string TypeDescription { get; set; }
+        public string CategoryName { get; set; }
+        public string CategoryDescription { get; set; }
+        public string TypeName { get; set; }
         public string Code { get; set; }
         public List<byte> RawData { get; set; }
         public int Length { get; set; }
@@ -32,10 +36,14 @@ namespace AFPParser
             {
                 RawData.Add(data[i]);
             }
-            StructuredField sf = new StructuredField((data[start + 3].ToString("x2") + data[start + 4].ToString("x2") + data[start + 5].ToString("x2")).ToUpper());
+            //StructuredField sf = new StructuredField((data[start + 3].ToString("x2") + data[start + 4].ToString("x2") + data[start + 5].ToString("x2")).ToUpper());
+            StructuredField sf = new StructuredField(data[start + 3], data[start + 4], data[start + 5]);
             Code = sf.Code;
-            Description = sf.Description;
-            Name = sf.Name;
+            CategoryDescription = sf.CategoryDescription;
+            Name = sf.Type + ": " + sf.Category;
+            CategoryName = sf.Category;
+            TypeDescription = sf.TypeDescription;
+            TypeName = sf.Type;
             //Data
         }
         public AFPNode(AFPNode data) {

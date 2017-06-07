@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AFP Reader", "AFP Reader\AF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AFPParser", "AFPParser\AFPParser.csproj", "{FB0754F3-2D81-4E70-9643-CF22AC0C8F7D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AFP Interrogator", "AFP Interrogator\AFP Interrogator.csproj", "{00D8E67A-ABA7-4C59-ACF9-23C80B9E78FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{FB0754F3-2D81-4E70-9643-CF22AC0C8F7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB0754F3-2D81-4E70-9643-CF22AC0C8F7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB0754F3-2D81-4E70-9643-CF22AC0C8F7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00D8E67A-ABA7-4C59-ACF9-23C80B9E78FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00D8E67A-ABA7-4C59-ACF9-23C80B9E78FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00D8E67A-ABA7-4C59-ACF9-23C80B9E78FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00D8E67A-ABA7-4C59-ACF9-23C80B9E78FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

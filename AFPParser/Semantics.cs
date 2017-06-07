@@ -9,5 +9,7 @@ namespace AFPParser
     public class Semantics
     {
         public List<ISemanticInfo> Item { get; set; }
+
+        public Semantics() { }
     }
 }
