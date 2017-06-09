@@ -9,6 +9,29 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AFPParser", "AFPParser\AFPP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AFP Interrogator", "AFP Interrogator\AFP Interrogator.csproj", "{00D8E67A-ABA7-4C59-ACF9-23C80B9E78FF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AFPRenderer", "AFPRenderer\AFPRenderer.csproj", "{AD0F63A0-D3EC-486A-BA40-E327416DA49E}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AFPHTMLRenderer", "AFPHTMLRenderer\", "{A5990F35-3C61-4130-A54D-A4E7619E0AC3}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_35377"
+		Debug.AspNetCompiler.PhysicalPath = "AFPHTMLRenderer\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_35377\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_35377"
+		Release.AspNetCompiler.PhysicalPath = "AFPHTMLRenderer\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_35377\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "35377"
+		SlnRelativePath = "AFPHTMLRenderer\"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +50,14 @@ Global
 		{00D8E67A-ABA7-4C59-ACF9-23C80B9E78FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00D8E67A-ABA7-4C59-ACF9-23C80B9E78FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00D8E67A-ABA7-4C59-ACF9-23C80B9E78FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD0F63A0-D3EC-486A-BA40-E327416DA49E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD0F63A0-D3EC-486A-BA40-E327416DA49E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD0F63A0-D3EC-486A-BA40-E327416DA49E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD0F63A0-D3EC-486A-BA40-E327416DA49E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5990F35-3C61-4130-A54D-A4E7619E0AC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5990F35-3C61-4130-A54D-A4E7619E0AC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5990F35-3C61-4130-A54D-A4E7619E0AC3}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5990F35-3C61-4130-A54D-A4E7619E0AC3}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
