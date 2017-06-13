@@ -1,0 +1,52 @@
+﻿@font-face {
+    font-family: "IMB";
+    src: url(/font/USPSIMBStandard.ttf);
+}
+
+    body {
+        background-color: #ddd;
+    }
+
+    .main {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+
+    .page {
+        background-color: #fff;
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 0;
+        margin-bottom: 25px;
+        position: relative;
+        font-size: 6pt;
+    }
+
+    .line {
+        box-sizing: border-box;
+        position: absolute;
+    }
+
+        .line.active {
+            border: 1px solid red;
+        }
+
+@page {
+margin:0;padding:0;
+}
+@media print {
+    body {
+    background-color:white;
+    }
+    .page {
+    background-color: #fff;
+        width: 100%;
+        margin:0;
+        padding:0;
+        position: relative;
+        
+    }
+    .dontprint{display:none;}
+}
